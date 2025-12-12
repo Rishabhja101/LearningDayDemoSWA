@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sample Hello World Page</title>
+    <meta name="description" content="Sample hello world page for a learning session." />
+
+    <style>
+      :root {
+        --bg: #0b1020;
+        --card: rgba(255, 255, 255, 0.06);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.68);
+        --border: rgba(255, 255, 255, 0.14);
+        --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+        --radius: 18px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background:
+          radial-gradient(900px 600px at 20% 10%, rgba(110, 231, 183, 0.18), transparent 60%),
+          radial-gradient(900px 600px at 80% 20%, rgba(96, 165, 250, 0.18), transparent 60%),
+          radial-gradient(1200px 800px at 50% 90%, rgba(167, 139, 250, 0.16), transparent 60%),
+          var(--bg);
+        display: grid;
+        place-items: center;
+        padding: 28px;
+      }
+
+      .container {
+        width: min(800px, 100%);
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(14px);
+      }
+
+      header {
+        padding: 28px;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(28px, 4vw, 40px);
+        letter-spacing: -0.02em;
+      }
+
+      .subtitle {
+        margin-top: 12px;
+        font-size: 16px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      main {
+        padding: 0 28px 28px;
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.04);
+        padding: 24px;
+        text-align: center;
+      }
+
+      footer {
+        padding: 16px 28px 24px;
+        font-size: 13px;
+        color: var(--muted);
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Sample Hello World Page</h1>
+        <p class="subtitle">
+          This is a sample hello world page for a learning session.
+        </p>
+      </header>
+
+      <main>
+        <section class="card">
+          <h2>Hello World 👋</h2>
+          <p class="subtitle">
+            Welcome! This page is intentionally simple and is being used for a learning session demo.
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        © <span id="year"></span> Learning Session
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
